@@ -1,0 +1,12 @@
+name: test on push on main / develop
+"on":
+  push:
+    branches:
+      - main
+      - develop
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm install -g jest
+      - run: jest
